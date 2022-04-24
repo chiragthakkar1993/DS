@@ -1,3 +1,5 @@
+package programs;
+
 class BinarySearch1 {
   
     public int search(int[] nums, int target) {

@@ -1,4 +1,4 @@
-/*
+package programs;/*
 
 Given an array of size N and K, find out maximum sum of the contiguous sub-array of size K
 input - [1,4,3,8,2,9,4], k =3
