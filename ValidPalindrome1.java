@@ -20,8 +20,8 @@ Output: false
 
 */
 
-class LeetcodePalindrome3 {
-    public boolean checkPalindrome(String s, int i, int j){
+class ValidPalindrome1 {
+    private boolean checkPalindrome(String s, int i, int j){
         while(i<j){
             if(s.charAt(i)!=s.charAt(j)){
                 return false;   
@@ -44,5 +44,9 @@ class LeetcodePalindrome3 {
             j--;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new ValidPalindrome1().validPalindrome("abfcdcba"));
     }
 }

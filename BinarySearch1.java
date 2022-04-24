@@ -1,4 +1,4 @@
-class Solution {
+class BinarySearch1 {
   
     public int search(int[] nums, int target) {
       
@@ -15,5 +15,9 @@ class Solution {
         }
         return -1;
         
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new BinarySearch1().search(new int[]{1, 3, 5, 9, 12, 16, 45},45));
     }
 }
