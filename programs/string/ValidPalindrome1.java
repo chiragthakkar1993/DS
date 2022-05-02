@@ -18,6 +18,8 @@ Example 3:
 Input: s = "abc"
 Output: false
 
+complexity O(n)
+
 */
 
 class ValidPalindrome1 {
