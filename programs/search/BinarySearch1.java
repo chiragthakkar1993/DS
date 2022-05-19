@@ -7,12 +7,12 @@ class BinarySearch1 {
         int start = 0;
         int end = nums.length -1;
         int mid = 0;
-        while(start < end){
+        while(start <= end){
              mid = (start + end) / 2;
             if(nums[mid] < target)
                 start = mid+1;
             else
-                end = mid;
+                end = mid-1;
         }
         if(nums[start] == target)
             return start;

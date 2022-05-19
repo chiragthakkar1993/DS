@@ -1,7 +1,6 @@
-package array.windowtechnique;
+package dfs;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 class Product {
     String name;
