@@ -39,21 +39,20 @@ import java.util.Arrays;
 
 
  */
-public class RotateArray {
+public class LeftRotateArray {
 
     public static void rotate_bruteForce(int[] nums, int k) {
-        // speed up the rotation
         k %= nums.length;
-        int temp, previous;
         for (int i = 0; i < k; i++) {
-            previous = nums[nums.length - 1];
-            for (int j = 0; j < nums.length; j++) {
-                temp = nums[j];
-                nums[j] = previous;
-                previous = temp;
+            int prev  = nums[0];
+            for (int j=nums.length-1 ;j>=0;j--){
+                int tmp = nums[j];
+                nums[j] = prev;
+                prev = tmp;
             }
         }
     }
+
     public static void rotate(int[] nums, int k) {
         int n = nums.length;
         int count = 0;
@@ -61,7 +60,9 @@ public class RotateArray {
             int curPos = i;
             int curVal = nums[i];
             do {
-                int newPos = (curPos + k) % n;
+                int newPos = (curPos - k) ;
+                if(newPos < 0)
+                    newPos = n - Math.abs(newPos);
                 int tmp = nums[newPos];
                 nums[newPos] = curVal;
                 curVal = tmp;
@@ -78,10 +79,10 @@ public class RotateArray {
 
         System.out.println();
 
-        int nums2[] = {1,-100,3,99};
+        int nums2[] = {1, -100, 3, 99};
         rotate_bruteForce(nums2, 2);
 
-        Arrays.stream(nums2).forEach(val -> System.out.print(val+" "));
+        Arrays.stream(nums2).forEach(val -> System.out.print(val + " "));
 
     }
 }

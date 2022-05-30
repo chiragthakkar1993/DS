@@ -49,6 +49,6 @@ class ValidPalindrome1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new ValidPalindrome1().validPalindrome("abfcdcba"));
+        System.out.println(new ValidPalindrome1().validPalindrome("abcdcbaf"));
     }
 }
