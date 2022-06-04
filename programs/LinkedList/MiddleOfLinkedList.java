@@ -43,8 +43,16 @@ class ListNode {
 
 public class MiddleOfLinkedList {
 
+    public static ListNode solution2(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 
-    public ListNode middleNode(ListNode head) {
+    public static ListNode solution(ListNode head) {
         if (head == null)
             return head;
 
@@ -62,7 +70,7 @@ public class MiddleOfLinkedList {
         return head;
     }
 
-    public int findSize(ListNode head) {
+    public static int findSize(ListNode head) {
         int size = 0;
 
         while (head != null) {
